@@ -66,6 +66,7 @@
 1. Открыл сервис **IAM**.
 2. Выбрал **User groups → Create group**.
 3. Назвал группу — **Admins**.
+<img width="1280" height="318" alt="Image" src="https://github.com/user-attachments/assets/c35bd39f-6da1-4b6e-8714-b75a2288ab13" />      
 4. Прикрепил политику **AdministratorAccess**.
 
 **Ответ на вопрос: что делает данная политика?**
@@ -79,6 +80,7 @@
 2. Имя пользователя: **cloudstudent**.
 3. Добавил в группу Admins.
 4. Разрешил доступ в Web Console.
+<img width="1280" height="432" alt="Image" src="https://github.com/user-attachments/assets/6062f8f3-c403-41f0-bf73-ef480b52fe96" /> 
 
 После выхода из root-аккаунта вошёл под IAM-пользователем.
 
