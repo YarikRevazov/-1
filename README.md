@@ -146,6 +146,7 @@ Nginx — это высокопроизводительный веб-серве�
 👉 [http://35.159.70.16](http://35.159.70.16)
 (страница nginx отобразилась после настройки SG и запуска сервиса)
 
+<img width="1280" height="411" alt="Image" src="https://github.com/user-attachments/assets/c9ef9fdc-efc7-46ec-a5e2-f8e00a1a484c" />
 ---
 
 # **4.5. Задание 4 — Логирование и мониторинг**
@@ -164,6 +165,7 @@ Nginx — это высокопроизводительный веб-серве�
 **Ответ: когда требуется detailed monitoring?**
 В продакшене, при высоких нагрузках, когда важна частота обновления данных — раз в минуту.
 
+<img width="1280" height="425" alt="Image" src="https://github.com/user-attachments/assets/5a125f5e-53b2-4044-9139-e283cc928666" />
 ---
 
 ### **System log**
@@ -177,6 +179,7 @@ Nginx — это высокопроизводительный веб-серве�
 * выполнение User Data,
 * установку nginx.
 
+<img width="1280" height="542" alt="Image" src="https://github.com/user-attachments/assets/ae018197-0936-4a1c-817f-ff018072883e" />
 ---
 
 ### **Instance Screenshot**
@@ -184,6 +187,7 @@ Nginx — это высокопроизводительный веб-серве�
 Проверил загрузочный экран ОС.
 Инструмент полезен при ошибках загрузки или если SSH недоступен.
 
+<img width="1225" height="930" alt="Image" src="https://github.com/user-attachments/assets/b6424a94-bbbd-48b4-9f77-c0193d5e8741" />
 ---
 
 # **4.6. Задание 5 — Подключение по SSH**
@@ -204,17 +208,22 @@ icacls "D:\aws\cloudstudent-keypair.pem" /grant:r "lenovo:R"
 ssh -i "D:\aws\cloudstudent-keypair.pem" ec2-user@35.159.70.16
 ```
 
+
 Успешно открылось приглашение:
 
 ```
 [ec2-user@ip-172-31-38-198 ~]$
 ```
 
+<img width="1280" height="424" alt="Image" src="https://github.com/user-attachments/assets/67081858-39cc-49b2-ba79-f4de20c1fcbb" />
+
 ### **Проверка Nginx**
 
 ```
 systemctl status nginx
 ```
+
+<img width="1280" height="451" alt="Image" src="https://github.com/user-attachments/assets/017958d4-09bc-4666-9a6c-905d3d5496a8" />
 
 **Ответ: почему AWS запрещает вход по паролю?**
 
@@ -238,6 +247,9 @@ scp -i "D:\aws\cloudstudent-keypair.pem" about.html   ec2-user@35.159.70.16:/tmp
 scp -i "D:\aws\cloudstudent-keypair.pem" contact.html ec2-user@35.159.70.16:/tmp
 ```
 
+
+<img width="1149" height="1280" alt="Image" src="https://github.com/user-attachments/assets/0d73d7c4-5a04-411d-b38e-4be504c40695" />
+
 ### **3. Переместил файлы в nginx**
 
 ```bash
@@ -256,60 +268,15 @@ ls -l /usr/share/nginx/html
 * [http://35.159.70.16/about.html](http://35.159.70.16/about.html)
 * [http://35.159.70.16/contact.html](http://35.159.70.16/contact.html)
 
+<img width="1280" height="483" alt="Image" src="https://github.com/user-attachments/assets/a876bd8b-e753-4ee7-85cd-0005fca17a8d" />
 ---
 
-# **4.8. Задание 6b — Развёртывание PHP-сайта**
-
-(Если студент выбрал PHP)
-
-Он создал:
-
-```
-php-site/
-   index.php
-   about.php
-   contact.php
-```
-
-Скопировал:
-
-```powershell
-scp -i "D:\aws\cloudstudent-keypair.pem" -r php-site/* ec2-user@35.159.70.16:/tmp
-```
-
-Переместил:
-
-```bash
-sudo mv /tmp/*.php /usr/share/nginx/html/
-```
-
-Установил PHP-FPM:
-
-```bash
-sudo dnf -y install php php-fpm
-sudo systemctl enable php-fpm
-sudo systemctl start php-fpm
-```
-
-Настроил конфигурацию:
-/etc/nginx/conf.d/mywebsite.conf
-
-**Ответ: что делает конфигурационный файл?**
-
-* Устанавливает корневую директорию сайта
-* Настраивает обработку PHP через php-fpm
-* Запрещает доступ к скрытым файлам
-* Задаёт индексные файлы
-
----
 
 # **4.9. Задание 7 — Завершение работы**
 
 Остановил инстанс:
 
-```bash
-aws ec2 stop-instances --instance-ids i-02a329f46f6327e51
-```
+<img width="861" height="1170" alt="Image" src="https://github.com/user-attachments/assets/f12f106c-9a61-4a41-b99d-cea6f3e1f392" />
 
 **Ответ: Stop vs Terminate**
 
@@ -319,6 +286,7 @@ aws ec2 stop-instances --instance-ids i-02a329f46f6327e51
 | **Terminate** | Инстанс удаляется полностью, данные на диске теряются        |
 
 ---
+
 
 # **5. Список использованных источников**
 
