@@ -94,9 +94,10 @@
 4. Заполнил поля:
 
    * Budget name: **ZeroSpend**
-   * Email: *мой e-mail*
+   * Email: *iaroslavrevazov@gmail.com*
 
 ZeroSpend присылает уведомления, если траты превышают $0.00.
+<img width="1280" height="365" alt="Image" src="https://github.com/user-attachments/assets/e000a3fa-97c0-498b-9b2c-0ebcd1dbff4a" />
 
 ---
 
@@ -124,6 +125,7 @@ dnf -y install nginx
 systemctl enable nginx
 systemctl start nginx
 ```
+<img width="1280" height="800" alt="Image" src="https://github.com/user-attachments/assets/c1701f55-5b29-48ae-aab8-748dc2b6007d" />
 
 **Ответ: что такое User Data?**
 User Data — это скрипт инициализации, который автоматически выполняется при первом запуске инстанса. Позволяет устанавливать программы и изменять конфигурацию без ручного логина.
@@ -137,6 +139,8 @@ Nginx — это высокопроизводительный веб-серве�
 
 * Instance state: **Running**
 * Status checks: **2/2 passed**
+
+<img width="815" height="409" alt="Image" src="https://github.com/user-attachments/assets/a149304c-352b-4740-bd53-93b1d7dc629a" />
 
 Открыл в браузере:
 👉 [http://35.159.70.16](http://35.159.70.16)
